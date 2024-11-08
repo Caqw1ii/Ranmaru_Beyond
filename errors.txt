@@ -1,0 +1,12 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+The label choices is defined twice, at File "game/script.rpy", line 48:
+label choices:
+and File "game/script.rpy", line 188:
+label choices:
+
+
+Ren'Py Version: Ren'Py 8.3.3.24110501+nightly
+Fri Nov  8 13:25:20 2024
