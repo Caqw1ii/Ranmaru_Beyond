@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 
 # Declare characters used by this game. The color argument colorizes the
@@ -14,28 +14,31 @@ label start:
 play music "audio/background_music.ogg" fadein 1.0 volume 0.5
 # Your story starts here
 "Another day in high schol... Same old routine, how boring."
-"Joe hasn't shown up in a while. Not that I miss him, just having some trouble easing around other people."
-"Well, its not like I really want to."
+scene sara id
+with fade
+"Joe hasn't shown up in a while." 
+"He's a second year high school student, so we’ve had a lot of classes together since last year."
+"I'm glad that we became close friends so quickly."
+"Not that I miss him, just having some trouble easing around other people."
+"It’s not like I’m really trying to fit in, anyway."
 "..."
-"For me, they're all the same. It's like they just exist."
-"If someone would approach me, I wouldn't mind to have a talk, but if not, uh.., I dont care."
+"For me, they're all the same, It's like they just... exist."
+"If someone approached me, I wouldn't mind to have a talk, but if they don't, whatever, I dont care."
 "As I recall, Joe talked to me first. If he hadn't, we wouldn't be as close as we are now."
-"All the days seem to be the same, gray and dull."
-"Staring at the window for sure make me feel a bit lost in thought."
+"For some reason now the days seem to be the same, gray and dull."
 "???" "Uhh.. hey there."
 "???" "I'm pretty sure that you already know my name, but... just in case."
-
-"(Huh, he never approached me before. Right.. that's Ranmaru, the guy from another class, don't know much about him.)"
+scene black
+with fade
+"(Huh, he never approached me before. Right, that's Ranmaru, the guy from another class.)"
+"(Don't know much about him.)"
 "(How haven't I noticed someone standing next to me this whole time?)"
 
 "Ranmaru" "What's good?"
 "Ranmaru" "..."
 
-show ranmaru ha
-with fade
-
-"Ranmaru" "I know that we don't talk often, but I want to keep you company."
 show ranmaru first
+with fade
 "Ranmaru" "You've been staring nowhere for some time already."
 "Ranmaru" "Seems like you were alone for a couple of days."
 "Ranmaru" "Honestly, I don't really have anyone to talk to either."
@@ -108,6 +111,18 @@ label choices2_common:
     "(Will he talk to me again one day?)"
 
     "Some time passed..."
+    "(It's so noisy again...)"
+"(Those students are already getting on my nerves.)"
+"(I don’t think I’d ever fit in with them.)"
+"(Maybe I’ll be alone until Joe gets back.)"
+"..."
+"(Guess I’ll just wander around the school for a while.)"
+"(Nothing’s really caught my attention, until...)"
+"(Hmm, I’ve never actually spent much time in the library.)"
+"(Looks like a good place to sit quietly and get ready for my classes.)"
+"(Most people here are always in groups, so they rarely visit places like that.)"
+
+
 
 
 
@@ -167,10 +182,8 @@ show ranmaru blue
 show ranmaru gray
 "Ranmaru" "..."
 show ranmaru dark
-"Ranmaru" "You should come here more often."
-"Ranmaru" "Visit me sometimes."
-show ranmaru blue
-"Ranmaru" "Well... If you want to."
+"Ranmaru" "People don't usually pay much attention to this place."
+"Ranmaru" "You can come here whenever you want to."
 scene black
 "The next day.."
 show ranmaru dark
@@ -210,7 +223,7 @@ label choices1_a:
 
 label choices1_b:
     show ranmaru first
-    Ranmaru "You're wild..!"
+    Ranmaru "Are you really that carefree?"
     show ranmaru look
     Ranmaru "How can u change your subjects without knowing why.."
     jump choices1_common
@@ -218,14 +231,11 @@ label choices1_b:
 
 label choices1_c:
     show ranmaru surprised
-    Ranmaru "WOAH!"
+    Ranmaru "Wow"
     show ranmaru nervous
     Ranmaru "..."
-    Ranmaru "(What am I even supposed to say...)"
-    show ranmaru ha
-    Ranmaru "You like me that much, huh?"
-    show ranmaru shocked
-    Ranmaru "(Shit.. that was dumb)"
+    show ranmaru blush
+    Ranmaru "Thanks, I guess."
     jump choices1_common
 
 
@@ -236,6 +246,8 @@ label choices1_common:
     Ranmaru "I guess I’ll be taking Japanese in a different class now."
     show ranmaru happy
     Ranmaru "See you later."
+
+    
 
 
 label bgm:
@@ -263,5 +275,3 @@ label sfx:
 
 
     return
-
-
